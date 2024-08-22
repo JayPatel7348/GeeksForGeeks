@@ -1,0 +1,12 @@
+<suite name="GeeksForGeeks">
+    <listner>
+    <listner class-name="org.testng.reporters.EmailableReporter2"/>
+    </listner>
+
+    <test name="study">
+        <classes>
+            <class name="testNG.testGeeksForGeeks"/>
+        </classes>
+
+    </test>
+</suite>
