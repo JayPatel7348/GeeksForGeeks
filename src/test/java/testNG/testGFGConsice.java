@@ -8,10 +8,6 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
-import pages.FullPageScreenShot;
-import pages.MouseHover;
-import pages.SwitchWindow;
-import pages.screenShot;
 
 import java.io.IOException;
 
