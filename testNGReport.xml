@@ -6,6 +6,8 @@
     <test name="study">
         <classes>
             <class name="testNG.testGeeksForGeeks"/>
+            <class name="testNG.testGFGConsice"/>
+            <class name="testNG.testGFGConsice2"/>
         </classes>
 
     </test>

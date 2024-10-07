@@ -21,7 +21,7 @@ public class FullPageScreenShot {
 
             String time= new SimpleDateFormat("yyyyMMdd_hhmmss").format(new Date());
             // Save the screenshot to a file
-            ImageIO.write(screenshot.getImage(), "PNG", new File("./SS/"+time+"FullPage.png"));
+            ImageIO.write(screenshot.getImage(), "PNG", new File("./SS/_fullpage"+time+".png"));
 
             System.out.println("Screenshot taken and saved as fullpage_screenshot.png");
         } catch (IOException e) {
