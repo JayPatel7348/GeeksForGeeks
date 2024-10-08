@@ -18,7 +18,7 @@ public class testGFGConsice extends util {
     util utl;
 
     @BeforeMethod
-    public void browserLaunch() throws InterruptedException {
+    public void browserLaunch() {
         driver=new ChromeDriver();
         driver.manage().window().maximize();
         driver.get("https://www.geeksforgeeks.org/");

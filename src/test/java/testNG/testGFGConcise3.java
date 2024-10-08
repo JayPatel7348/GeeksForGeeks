@@ -1,7 +1,6 @@
 package testNG;
 
 import Utilities.util;
-import org.openqa.selenium.By;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
@@ -19,7 +18,7 @@ public class testGFGConcise3 {
     util utl;
 
     @BeforeMethod
-    public void browserLaunch() throws InterruptedException {
+    public void browserLaunch() {
         driver=new ChromeDriver();
         driver.manage().window().maximize();
         driver.get("https://www.geeksforgeeks.org/");
