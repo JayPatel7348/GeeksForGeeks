@@ -5,13 +5,7 @@ import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.Assert;
-import org.testng.annotations.DataProvider;
-import ru.yandex.qatools.ashot.AShot;
-import ru.yandex.qatools.ashot.Screenshot;
-import ru.yandex.qatools.ashot.shooting.ShootingStrategies;
 
-import javax.imageio.ImageIO;
 import java.io.File;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
@@ -81,25 +75,6 @@ public class util {
         Thread.sleep(1000);
     }
 
-
-
-
-  /*  public void takeFullPageScreenshot(WebDriver driver){
-        try {
-            // Use AShot to capture the full page screenshot
-            Screenshot screenshot = new AShot()
-                    .shootingStrategy(ShootingStrategies.viewportPasting(1000))
-                    .takeScreenshot(driver);
-
-            String time= new SimpleDateFormat("yyyyMMdd_hhmmss").format(new Date());
-            // Save the screenshot to a file
-            ImageIO.write(screenshot.getImage(), "PNG", new File("./SS/_fullpage"+time+".png"));
-
-            System.out.println("Screenshot taken and saved as fullpage_screenshot.png");
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }*/
 
     }
 
