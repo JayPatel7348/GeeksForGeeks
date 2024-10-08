@@ -31,7 +31,7 @@ public class testGFGConsice2 extends util {
     }
 
     @Test(dataProvider = "getData")
-    public void openMenuDropdown(String mainmenu,String submenu,String submenu1,String expectedTitle) throws InterruptedException, IOException {
+    public void openMenuDropdown(String mainmenu,String submenu,String submenu1,String waitElement,String expectedTitle) throws InterruptedException, IOException {
 
         //Mouse Hover
         utl.mouseHover(driver,"//*[normalize-space()='"+mainmenu+"']");
@@ -47,7 +47,7 @@ public class testGFGConsice2 extends util {
         //utl.impliWait(driver);
 
         // explicit wait till the specific condition true
-        utl.expliWait(driver);
+        utl.expliWait(driver,waitElement);
         utl.Screenshot(driver);
         String subject= driver.getTitle();
         Assert.assertEquals(subject,expectedTitle);

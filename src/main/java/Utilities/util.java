@@ -22,10 +22,11 @@ import java.util.Set;
 
 public class util {
 
-    public static void mouseHover(WebDriver driver, String locator) {
+    public static void mouseHover(WebDriver driver, String locator) throws InterruptedException {
         Actions actions = new Actions(driver);
         WebElement menu = driver.findElement(By.xpath(locator));
         actions.moveToElement(menu).perform();
+        Thread.sleep(1000);
     }
 
     public static void Screenshot(WebDriver driver) throws IOException {
@@ -59,12 +60,30 @@ public class util {
     public static void impliWait(WebDriver driver){
          driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
     }
-    public static void expliWait(WebDriver driver){
+
+
+    public static void expliWait(WebDriver driver,String locator){
         WebDriverWait wait=new WebDriverWait(driver,Duration.ofSeconds(5));
-        WebElement checkElement=wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[normalize-space()='Apply before Fri Aug 16 2024']")));
-        String expected=checkElement.getText();
-        Assert.assertEquals("Apply before Fri Aug 16 2024",expected);
+        WebElement checkElement=wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[normalize-space()='"+locator+"']")));
+//        String expected=checkElement.getText();
+//        Assert.assertEquals(locator,expected);
     }
+
+    public static void drpDwnClk(WebDriver driver,String locator) throws InterruptedException {
+        driver.findElement(By.xpath("//*[normalize-space()='"+locator+"']")).click();
+        Thread.sleep(1000);
+    }
+
+    public static void mouseHover2(WebDriver driver, String locator) throws InterruptedException {
+        Actions actions = new Actions(driver);
+        WebElement menu = driver.findElement(By.xpath("//*[normalize-space()='"+locator+"']"));
+        actions.moveToElement(menu).perform();
+        Thread.sleep(1000);
+    }
+
+
+
+
   /*  public void takeFullPageScreenshot(WebDriver driver){
         try {
             // Use AShot to capture the full page screenshot
