@@ -12,7 +12,7 @@ import org.testng.annotations.Test;
 import java.io.IOException;
 
 
-public class testGFGConsice extends util {
+public class testGFGConcise extends util {
 
     ChromeDriver driver;
     util utl;

@@ -10,10 +10,9 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import java.io.IOException;
-import java.time.Duration;
 
 
-public class testGFGConsice2 extends util {
+public class testGFGConcise2 extends util {
 
     ChromeDriver driver;
     util utl;

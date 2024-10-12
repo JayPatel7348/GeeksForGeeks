@@ -6,7 +6,7 @@
     <test name="study">
         <classes>
 <!--            <class name="testNG.testGeeksForGeeks"/>-->
-<!--            <class name="testNG.testGFGConsice"/>-->
+<!--            <class name="testNG.testGFGConcise"/>-->
             <class name="testNG.testGFGConcise3"/>
         </classes>
 
